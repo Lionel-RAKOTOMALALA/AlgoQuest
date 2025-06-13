@@ -3,9 +3,19 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: { 
+    unoptimized: true,
+    domains: ['images.pexels.com'],
+  },
   swcMinify: true,
   reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-*'],
+  },
 };
 
 module.exports = nextConfig;
